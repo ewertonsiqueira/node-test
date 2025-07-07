@@ -7,8 +7,7 @@ const database = new DataBasePostgres()
 
 server.post('/videos', async (request, replay) => {
   const { title, description, duration } = request.body
-  console.log(title, description, duration)
-
+  
  await database.create({
     title,
     description,
